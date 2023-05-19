@@ -2,12 +2,13 @@ import express from 'express';
 import mongoose from 'mongoose';
 import Cors from 'cors';
 
+import { URL_CONNECTION } from './sensitiveinformation.js'
 import Cards from './dbCards.js'
 
 // App Config
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url = 'mongodb+srv://admin:ujqMnV2fIy4hvGkE@cluster0.qvgpg4e.mongodb.net/local_library?retryWrites=true&w=majority';
+const connection_url = URL_CONNECTION;
 
 // Middlewares
 app.use(express.json());
